@@ -1,0 +1,239 @@
+.header {
+  height: 85px;
+  width: 100vw;
+  margin-top: 65px;
+  display: flex;
+
+  &__logo {
+    width: 565px; 
+    height: 100%;
+    background-color: $color-logo;
+  }
+
+  &__nav {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-grow: 1;
+
+    ul {
+      display: flex;
+      align-items: center;
+      padding-right: 85px;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:first-child{
+          border-right: 1px solid $color-white;
+          padding-right: 10px;
+          margin-right: 10px;
+          text-transform: uppercase;
+          font-family: "Arial";
+          font-weight: bold;
+          font-size: 19px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $color-white;
+          padding: 0 5px;
+          justify-content: center;
+          align-items: center;
+
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: 100vw;
+  height: calc(100vh - 285px);
+  height: 692px;
+  padding-left: 70px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .text-side {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 40vw;
+    color: $color-white;
+    font-family: "Source Sans Pro";
+    padding-right: 200px;
+
+    &--header {
+      text-transform: uppercase;
+      font-size: 58px;
+      letter-spacing: -1px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    &--text {
+      font-size: 22px;
+      font-weight: 400;
+    }
+  }
+
+  .choice-side {
+    width: 55vw;
+    height: 100%;
+    background-color: $color-logo;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-family: "Source Sans Pro";
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0;
+      color: $color-red;
+      border-bottom: 2px solid $color-red;
+      padding: 50px 0 30px 0;
+      margin: 0 55px;
+    }
+
+    .choice-box {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 95px;
+
+        label {
+          padding: 25px 30px;
+          font-size: 22px;
+          font-family: "Source Sans Pro";
+          position: relative;
+
+          .circle {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid $color-red;
+            position: absolute;
+            left: 0;
+            top: 40px;
+          }
+
+          .filled {
+            background-color: $color-red;
+          }
+
+          .upper {
+            display: block;
+            font-weight: 700;
+          }
+
+          .lower {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .btn {
+      background-color: $color-red;
+      color: $color-white;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      font-family: "Arial";
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 30px;
+      border: none;
+      box-shadow: 6px 6px 20px 1px gray;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 135px;
+  width: 100vw;
+  padding-bottom: 55px;
+  margin-top: 100px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 100%;
+    margin: 0 auto;
+
+    .left-side {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      padding-right: 20px;
+      height: 100%;
+
+      &__logo {
+        width: 465px;
+        height: 40px;
+        background-color: $color-logo;
+      }
+
+      &__text {
+        width: 480px;
+        text-transform: uppercase;
+        color: $color-white;
+        font-family: "Arial";
+        font-size: 8px;
+
+        .footer-span {
+          padding: 0 5px;
+        }
+      }
+    }
+
+    .right-side {
+      height: 100%;
+      width: 250px;
+      color: $color-white;
+      font-family: "Arial";
+      padding-left: 20px;
+      border-left: 2px solid $color-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &__header {
+        font-size: 11px;
+      }
+
+      &__paragraph {
+        font-size: 8px;
+      }
+    }
+  }
+}
