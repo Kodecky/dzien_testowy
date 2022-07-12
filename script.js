@@ -9,6 +9,11 @@ const circ2 = document.querySelector(".circ2");
 const circ3 = document.querySelector(".circ3");
 const circ4 = document.querySelector(".circ4");
 
+const circle1 = document.querySelector(".circle1");
+const circle2 = document.querySelector(".circle2");
+const circle3 = document.querySelector(".circle3");
+const circle4 = document.querySelector(".circle4");
+
 btn1.addEventListener("click", ()=>{
   circ1.classList.toggle("filled");
   circ4.classList.remove("filled");
@@ -28,10 +33,31 @@ btn4.addEventListener("click", ()=>{
   circ4.classList.toggle("filled");
 })
 
-btnMain.addEventListener("click", ()=>{
-  for(i=1; i<=4; i++){
-    if(`circ${i}.className("filled")`) {
-      console.log(`Wybrano pozycję: ${i}`);
-    }
-  }
+
+let displayedLabel=[];
+
+btnMain.addEventListener("click", (event)=>{
+  event.preventDefault();
+  let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+
+  checkboxes.forEach((checkboxes, index)=>{
+    displayedLabel[index] = document.querySelector(`label[for='inp${index+1}'] span.upper`).textContent;
+  })
+  console.log(displayedLabel);
+
+  // for(i=0; i<=checkboxes.length; i++) {
+  //   console.log(displayedLabel[i]);
+  // }
+
+
+
+  // checkboxes.forEach((checkboxes,index)=>{ 
+  //     // console.log(document.querySelector(`label[for='inp${i}'] span.upper).textContent`)); 
+      
+  //       displayedLabel = document.querySelector(`label[for='inp" + ${index} + "'] span.upper`).textContent;
+  //       console.log(displayedLabel);
+      
+  // })
+  // let displayedLabel = document.querySelector("label[for='" + zmienna + "'] span.upper").textContent;
+
 })
